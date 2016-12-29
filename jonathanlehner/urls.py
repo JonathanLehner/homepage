@@ -20,9 +20,8 @@ urlpatterns = [
 
     url(r'^search/$', search_views.search, name='search'),
 
-    url(r'^', include(wagtail_urls), name="wagtail"),
-    # url(r'', RedirectView.as_view(url='/blog/', permanent=True), name='blog'),
-    #
+    url(r'^xyz', RedirectView.as_view(url='/blog/')),
+    url(r'', include(wagtail_urls), name="wagtail"),
 ]
 
 
